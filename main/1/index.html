@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Infographic: Bangkok MRT Challenges & Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #F3F4F6;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card-main {
+            background: linear-gradient(135deg, #00A6ED, #70C1B3);
+        }
+        .kpi-card-overcrowding {
+            background: linear-gradient(135deg, #FF5733, #F7C548);
+        }
+        .solution-card-bg-1 { background-color: #E0F2F1; }
+        .solution-card-bg-2 { background-color: #FFF3E0; }
+        .solution-card-bg-3 { background-color: #E3F2FD; }
+        .solution-card-bg-4 { background-color: #FCE4EC; }
+        .solution-card-bg-5 { background-color: #E8F5E9; }
+        .solution-card-bg-6 { background-color: #FFFDE7; }
+        .solution-card-bg-7 { background-color: #E1F5FE; }
+        .solution-card-bg-8 { background-color: #F3E5F5; }
+        .solution-card-bg-9 { background-color: #EFEBE9; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-lg p-6 text-center sticky top-0 z-50">
+        <h1 class="text-3xl md:text-5xl font-bold" style="color: #242325;">Bangkok MRT: Navigating Challenges, Driving Innovation</h1>
+        <p class="text-xl md:text-2xl font-semibold" style="color: #00A6ED;">A Roadmap for Enhanced Rider Experience - MRTA Innovation Camp 2025</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="executive-summary" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Executive Summary: A Vision for Urban Mobility</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    The MRTA Innovation Camp 2025 addresses the critical need for user-centric, sustainable public transportation in Bangkok. This infographic highlights key user disadvantages, from first/last-mile gaps to overcrowding, and proposes a strategic framework of AI-driven and design-focused innovations. Our goal is to transform the MRT into a more efficient, comfortable, and inclusive system, aligning with Thailand's smart city vision.
+                </p>
+            </div>
+        </section>
+
+        <section id="user-disadvantages" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">I. Overview of MRT User Disadvantages</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    The Bangkok MRT system faces several challenges impacting rider experience. Understanding these pain points is the first step towards innovation.
+                </p>
+                <div class="chart-container">
+                    <canvas id="overallDisadvantagesChart"></canvas>
+                </div>
+                <p class="text-center text-sm mt-4 text-gray-600">
+                    This chart highlights the most significant disadvantages for MRT users, with "First & Last-Mile Connectivity" and "Overcrowding & Congestion" ranking as top concerns.
+                </p>
+            </div>
+        </section>
+
+        <section id="operational-details" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">II. MRT Operational Details</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    A clear understanding of MRT's operational patterns, including hours, frequencies, and line information, is vital for efficient system management and user planning.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg mb-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2" style="color: #00A6ED;">General Operating Hours</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><span class="font-semibold">Weekdays:</span> First train ~05:30 AM, last train ~12:30 AM.</li>
+                            <li><span class="font-semibold">Weekends & Holidays:</span> First train ~06:00 AM, last train ~12:30 AM.</li>
+                            <li><span class="font-semibold">Daily Service:</span> Generally from 06:00 AM to Midnight.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2" style="color: #F7C548;">Train Frequency</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><span class="font-semibold">Weekday Peak (07:00-09:00 AM & 04:00-07:00 PM):</span> Every 3.5 - 5 minutes.</li>
+                            <li><span class="font-semibold">Weekday Off-Peak:</span> Every 5 - 7 minutes.</li>
+                            <li><span class="font-semibold">Weekends & Holidays:</span> Every 8 minutes (slightly more frequent on Sat. evenings).</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2 bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2" style="color: #70C1B3;">MRT Lines & Colors</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><span class="font-semibold text-blue-600">Blue Line (Chaloem Ratchamongkhon Line):</span> The primary circular line connecting major areas.</li>
+                            <li><span class="font-semibold text-purple-600">Purple Line (Chalong Ratchadham Line):</span> Connects Tao Poon to Khlong Bang Phai, serving northern/western suburbs.</li>
+                            <li><span class="font-semibold">Future Lines:</span> Several new lines are under construction or planned to expand the network.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4 text-center" style="color: #242325;">Crowding Patterns</h3>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    Understanding when and where crowding occurs is essential for targeted solutions.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="crowdingTimeChart"></canvas>
+                        </div>
+                        <p class="text-center text-sm mt-4 text-gray-600">
+                            This line chart shows typical crowding levels by hour for weekdays and weekends, highlighting distinct peak periods.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="stationCrowdingChart"></canvas>
+                        </div>
+                        <p class="text-center text-sm mt-4 text-gray-600">
+                            This bar chart indicates average crowding levels at key MRT stations, with interchange points often experiencing higher congestion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategic-solutions" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">III. Strategic Solutions for a Future-Ready MRT System</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    A multi-faceted approach leveraging technology, design, and policy is required to transform user disadvantages into opportunities for innovation.
+                </p>
+
+                <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #242325;">A. Tackling Overcrowding (Station & Train)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="solution-card-bg-7 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #70C1B3;">🚄</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Optimized Train Frequency & Capacity</h3>
+                        <p class="text-gray-700">Increase trains during peak hours; explore longer train sets or optimized car configurations to maximize capacity.</p>
+                    </div>
+                    <div class="solution-card-bg-8 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #FF5733;">🧘</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Smart Interior Design & Signage</h3>
+                        <p class="text-gray-700">Redesign train interiors for standing room; use digital screens to guide passengers to less crowded cars.</p>
+                    </div>
+                    <div class="solution-card-bg-9 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #00A6ED;">📊</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Real-Time Car Crowding Data</h3>
+                        <p class="text-gray-700">Provide live crowding levels for each car via platform displays and mobile app for informed choices.</p>
+                    </div>
+                    <div class="solution-card-bg-1 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #00A6ED;">🧠</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">AI-Powered Flow Management</h3>
+                        <p class="text-gray-700">Utilize AI with CCTV/sensors for real-time monitoring and dynamic guidance of passengers in stations.</p>
+                    </div>
+                    <div class="solution-card-bg-2 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #F7C548;">🛡️</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Platform Screen Doors (PSDs)</h3>
+                        <p class="text-gray-700">Install physical barriers for safety and precise train stopping, improving platform efficiency.</p>
+                    </div>
+                    <div class="solution-card-bg-4 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #FF5733;">🏗️</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Optimized Station Design</h3>
+                        <p class="text-gray-700">Redesign "conflict zones" and bottlenecks at transfer stations for smoother passenger flow.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #242325;">B. Enhancing Overall User Experience & Operational Efficiency</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="solution-card-bg-3 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #70C1B3;">📱</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Revitalize MRT Mobile Application</h3>
+                        <p class="text-gray-700">Redevelop the official app for stability, real-time data, offline access, and comprehensive features.</p>
+                    </div>
+                    <div class="solution-card-bg-5 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #00A6ED;">🔄</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Dynamic Fare Adjustments</h3>
+                        <p class="text-gray-700">Implement AI-driven dynamic pricing or distance-based fares to incentivize off-peak travel.</p>
+                    </div>
+                    <div class="solution-card-bg-6 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #F7C548;">🚶‍♀️</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Enhanced Pedestrian Zones</h3>
+                        <p class="text-gray-700">Improve walkways and cycling paths around stations to facilitate first/last-mile access.</p>
+                    </div>
+                    <div class="solution-card-bg-1 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #70C1B3;">📡</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Predictive Maintenance</h3>
+                        <p class="text-gray-700">Deploy IoT sensors and AI to predict equipment failures, reducing unplanned breakdowns.</p>
+                    </div>
+                    <div class="solution-card-bg-2 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #FF5733;">🤝</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Integrated Micro-mobility Hubs</h3>
+                        <p class="text-gray-700">Establish dedicated hubs for e-scooters, bike-sharing, and on-demand shuttles at stations.</p>
+                    </div>
+                    <div class="solution-card-bg-3 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #00A6ED;">🚨</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Smart Surveillance & Alerts</h3>
+                        <p class="text-gray-700">Utilize AI-powered video analytics for real-time detection of unusual activities or hotspots.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 mt-8 bg-gray-800 text-white">
+        <p>MRTA Innovation Camp 2025</p>
+        <p class="text-xs">Building a More Comfortable and Efficient MRT for Bangkok</p>
+    </footer>
+
+    <script>
+        const colorPalette = {
+            blue: '#00A6ED',
+            teal: '#70C1B3',
+            yellow: '#F7C548',
+            orange: '#FF5733',
+            dark: '#242325',
+            purple: '#800080' // Added for Purple Line
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                },
+                legend: {
+                    position: 'bottom',
+                }
+            }
+        };
+
+        const overallDisadvantagesData = {
+            labels: [
+                wrapLabel('First & Last-Mile Connectivity', 16),
+                wrapLabel('Overcrowding & Congestion', 16),
+                wrapLabel('Information Gaps & Delays', 16),
+                wrapLabel('Accessibility Barriers', 16),
+                wrapLabel('Fare Structure & Affordability', 16),
+                wrapLabel('Infrastructure & Maintenance', 16),
+                wrapLabel('Safety & Security Perceptions', 16),
+                wrapLabel('Bangkok-Specific Challenges', 16)
+            ],
+            datasets: [{
+                label: 'Impact Score (out of 10)',
+                data: [9.5, 9.0, 8.0, 7.5, 7.0, 6.5, 6.0, 8.5],
+                backgroundColor: [colorPalette.blue, colorPalette.teal, colorPalette.yellow, colorPalette.orange, '#FDD835', '#4DB6AC', '#FFAB91', '#FFEE58'],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        };
+        new Chart(document.getElementById('overallDisadvantagesChart'), {
+            type: 'bar',
+            data: overallDisadvantagesData,
+            options: {
+                ...tooltipTitleCallback,
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        grid: { display: false }
+                    },
+                    y: {
+                         grid: { display: false }
+                    }
+                },
+                plugins: { ...tooltipTitleCallback.plugins, legend: { display: false } }
+            }
+        });
+
+        const crowdingTimeData = {
+            labels: ['05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+            datasets: [{
+                label: 'Weekday Crowding Level (0-100%)',
+                data: [10, 25, 70, 85, 60, 40, 30, 35, 45, 50, 55, 65, 75, 90, 80, 50, 30, 20, 15],
+                borderColor: colorPalette.blue,
+                backgroundColor: 'rgba(0, 166, 237, 0.2)',
+                fill: true,
+                tension: 0.4
+            }, {
+                label: 'Weekend Crowding Level (0-100%)',
+                data: [5, 10, 20, 30, 40, 45, 50, 55, 60, 65, 60, 50, 40, 30, 25, 20, 15, 10, 5],
+                borderColor: colorPalette.teal,
+                backgroundColor: 'rgba(112, 193, 179, 0.2)',
+                fill: true,
+                tension: 0.4
+            }]
+        };
+
+        new Chart(document.getElementById('crowdingTimeChart'), {
+            type: 'line',
+            data: crowdingTimeData,
+            options: {
+                ...tooltipTitleCallback,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Crowding Level'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time of Day'
+                        }
+                    }
+                }
+            }
+        });
+
+        const stationCrowdingData = {
+            labels: [
+                wrapLabel('Sukhumvit (Asok)', 16),
+                wrapLabel('Chatuchak Park', 16),
+                wrapLabel('Sam Yan', 16),
+                wrapLabel('Hua Lamphong', 16),
+                wrapLabel('Phaholyothin', 16),
+                wrapLabel('Phetchaburi', 16),
+                wrapLabel('Thailand Cultural Centre', 16),
+                wrapLabel('Lumphini', 16)
+            ],
+            datasets: [{
+                label: 'Average Crowding Index (1-10)',
+                data: [9.2, 8.8, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5],
+                backgroundColor: [
+                    colorPalette.orange,
+                    colorPalette.yellow,
+                    colorPalette.teal,
+                    colorPalette.blue,
+                    '#90CAF9',
+                    '#4DB6AC',
+                    '#FFAB91',
+                    '#FFEE58'
+                ],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        };
+
+        new Chart(document.getElementById('stationCrowdingChart'), {
+            type: 'bar',
+            data: stationCrowdingData,
+            options: {
+                ...tooltipTitleCallback,
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: {
+                            display: true,
+                            text: 'Crowding Index'
+                        }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: { ...tooltipTitleCallback.plugins, legend: { display: false } }
+            }
+        });
+    </script>
+</body>
+</html>
