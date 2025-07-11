@@ -34,6 +34,9 @@
         .solution-card-bg-1 { background-color: #E0F2F1; }
         .solution-card-bg-2 { background-color: #FFF3E0; }
         .solution-card-bg-3 { background-color: #E3F2FD; }
+        .solution-card-bg-4 { background-color: #FCE4EC; } /* New color */
+        .solution-card-bg-5 { background-color: #E8F5E9; } /* New color */
+        .solution-card-bg-6 { background-color: #FFFDE7; } /* New color */
     </style>
 </head>
 <body class="text-gray-800">
@@ -93,6 +96,72 @@
             </div>
         </section>
 
+        <section id="crowding-time" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Peak vs. Off-Peak: Understanding Crowding Times</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    Crowding levels fluctuate significantly throughout the day and week. Analyzing these patterns is key to implementing targeted solutions for smoother journeys.
+                </p>
+                <div class="chart-container">
+                    <canvas id="crowdingTimeChart"></canvas>
+                </div>
+                <p class="text-center text-sm mt-4 text-gray-600">
+                    This line chart displays typical crowding levels across different hours for weekdays and weekends. Weekdays show distinct morning and evening peaks, while weekends have a more moderate, extended midday peak.
+                </p>
+            </div>
+        </section>
+
+        <section id="station-crowding" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Station Hotspots: Where Crowding is Most Intense</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    Certain stations experience significantly higher crowding due to their strategic location, transfer points, or proximity to major attractions and business districts. Identifying these hotspots is crucial for targeted interventions.
+                </p>
+                <div class="chart-container">
+                    <canvas id="stationCrowdingChart"></canvas>
+                </div>
+                <p class="text-center text-sm mt-4 text-gray-600">
+                    This bar chart highlights the average crowding levels at key MRT stations. Stations like Sukhumvit and Chatuchak Park, being major interchange or destination points, consistently show higher congestion.
+                </p>
+            </div>
+        </section>
+
+        <section id="operating-info" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Operating Hours & Service Frequency</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    Understanding the MRT's operational schedule and train frequencies is essential for planning your journey and avoiding peak-hour congestion.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2" style="color: #00A6ED;">General Operating Hours</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><span class="font-semibold">Weekdays:</span> First train departs around 05:30 AM, last train arrives around 12:30 AM.</li>
+                            <li><span class="font-semibold">Weekends & Public Holidays:</span> First train departs around 06:00 AM, last train arrives around 12:30 AM.</li>
+                            <li><span class="font-semibold">Daily Service:</span> Generally from 06:00 AM to Midnight.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2" style="color: #F7C548;">Train Frequency</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><span class="font-semibold">Weekday Peak Hours (approx. 07:00-09:00 AM & 04:00-07:00 PM):</span> Trains arrive every 3.5 - 5 minutes.</li>
+                            <li><span class="font-semibold">Weekday Off-Peak Hours:</span> Trains arrive every 5 - 7 minutes.</li>
+                            <li><span class="font-semibold">Weekends & Public Holidays:</span> Trains arrive every 8 minutes (slightly more frequent 04:00-07:00 PM on Saturdays).</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2 bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-2" style="color: #70C1B3;">Tips for a Smoother Journey</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><span class="font-semibold">Avoid Peak Hours:</span> If possible, travel during off-peak times to experience less crowding.</li>
+                            <li><span class="font-semibold">Use the App:</span> Check the official MRT app (once revitalized) for real-time crowding estimates and train schedules.</li>
+                            <li><span class="font-semibold">Plan Transfers:</span> Factor in transfer times, especially when connecting to other lines like the Purple Line.</li>
+                            <li><span class="font-semibold">Station Specifics:</span> Be aware that major interchange stations (e.g., Sukhumvit, Chatuchak Park) are generally busier.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="smart-solutions" class="mb-12">
             <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Smart Solutions for Smoother Journeys</h2>
@@ -115,10 +184,35 @@
                         <h3 class="font-bold text-xl mb-2" style="color: #242325;">Real-Time Commuter Apps</h3>
                         <p class="text-gray-700">Provide live crowd density data, predictive alerts for delays, and emergency notifications through an enhanced mobile application.</p>
                     </div>
-                    <div class="solution-card-bg-1 p-6 rounded-lg shadow-md flex flex-col items-center text-center md:col-span-2 lg:col-span-1">
+                    <div class="solution-card-bg-4 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
                         <div class="text-5xl mb-4" style="color: #FF5733;">🏗️</div>
                         <h3 class="font-bold text-xl mb-2" style="color: #242325;">Optimized Station Design</h3>
                         <p class="text-gray-700">Redesign "conflict zones" and bottlenecks at transfer stations, improving waiting areas, escalators, and corridors for smoother passenger flow.</p>
+                    </div>
+                    <div class="solution-card-bg-5 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #00A6ED;">🔄</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Dynamic Fare Adjustments</h3>
+                        <p class="text-gray-700">Implement AI-driven dynamic pricing or distance-based fares to incentivize off-peak travel and balance passenger loads.</p>
+                    </div>
+                    <div class="solution-card-bg-6 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #F7C548;">🚶‍♀️</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Enhanced Pedestrian Zones</h3>
+                        <p class="text-gray-700">Improve and expand pedestrian walkways and cycling paths around stations to facilitate first/last-mile access and reduce station congestion.</p>
+                    </div>
+                    <div class="solution-card-bg-1 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #70C1B3;">📡</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Predictive Maintenance</h3>
+                        <p class="text-gray-700">Deploy IoT sensors and AI to predict equipment failures, reducing unplanned breakdowns that can cause delays and overcrowding.</p>
+                    </div>
+                    <div class="solution-card-bg-2 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #FF5733;">🤝</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Integrated Micro-mobility Hubs</h3>
+                        <p class="text-gray-700">Establish dedicated hubs for e-scooters, bike-sharing, and on-demand shuttles at stations to streamline last-mile connections.</p>
+                    </div>
+                    <div class="solution-card-bg-3 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #00A6ED;">🚨</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Smart Surveillance & Alerts</h3>
+                        <p class="text-gray-700">Utilize AI-powered video analytics for real-time detection of unusual activities or overcrowding hotspots, triggering immediate alerts.</p>
                     </div>
                 </div>
             </div>
@@ -261,6 +355,108 @@
                         }
                     }
                 }
+            }
+        });
+
+        const crowdingTimeData = {
+            labels: ['05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+            datasets: [{
+                label: 'Weekday Crowding Level (0-100%)',
+                data: [10, 25, 70, 85, 60, 40, 30, 35, 45, 50, 55, 65, 75, 90, 80, 50, 30, 20, 15],
+                borderColor: colorPalette.blue,
+                backgroundColor: 'rgba(0, 166, 237, 0.2)',
+                fill: true,
+                tension: 0.4
+            }, {
+                label: 'Weekend Crowding Level (0-100%)',
+                data: [5, 10, 20, 30, 40, 45, 50, 55, 60, 65, 60, 50, 40, 30, 25, 20, 15, 10, 5],
+                borderColor: colorPalette.teal,
+                backgroundColor: 'rgba(112, 193, 179, 0.2)',
+                fill: true,
+                tension: 0.4
+            }]
+        };
+
+        new Chart(document.getElementById('crowdingTimeChart'), {
+            type: 'line',
+            data: crowdingTimeData,
+            options: {
+                ...tooltipTitleCallback,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Crowding Level'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time of Day'
+                        }
+                    }
+                }
+            }
+        });
+
+        const stationCrowdingData = {
+            labels: [
+                wrapLabel('Sukhumvit (Asok)', 16),
+                wrapLabel('Chatuchak Park', 16),
+                wrapLabel('Sam Yan', 16),
+                wrapLabel('Hua Lamphong', 16),
+                wrapLabel('Phaholyothin', 16),
+                wrapLabel('Phetchaburi', 16),
+                wrapLabel('Thailand Cultural Centre', 16),
+                wrapLabel('Lumphini', 16)
+            ],
+            datasets: [{
+                label: 'Average Crowding Index (1-10)',
+                data: [9.2, 8.8, 8.0, 7.5, 7.0, 6.5, 6.0, 5.5],
+                backgroundColor: [
+                    colorPalette.orange,
+                    colorPalette.yellow,
+                    colorPalette.teal,
+                    colorPalette.blue,
+                    '#90CAF9',
+                    '#4DB6AC',
+                    '#FFAB91',
+                    '#FFEE58'
+                ],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        };
+
+        new Chart(document.getElementById('stationCrowdingChart'), {
+            type: 'bar',
+            data: stationCrowdingData,
+            options: {
+                ...tooltipTitleCallback,
+                indexAxis: 'y', // Horizontal bar chart for better label readability
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: {
+                            display: true,
+                            text: 'Crowding Index'
+                        }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: { ...tooltipTitleCallback.plugins, legend: { display: false } }
             }
         });
     </script>
