@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Tackling MRT Overcrowding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #F3F4F6;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card-overcrowding {
+            background: linear-gradient(135deg, #FF5733, #F7C548);
+        }
+        .solution-card-bg-1 { background-color: #E0F2F1; }
+        .solution-card-bg-2 { background-color: #FFF3E0; }
+        .solution-card-bg-3 { background-color: #E3F2FD; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-lg p-6 text-center sticky top-0 z-50">
+        <h1 class="text-3xl md:text-5xl font-bold" style="color: #242325;">Optimizing Flow: Tackling MRT Overcrowding</h1>
+        <p class="text-xl md:text-2xl font-semibold" style="color: #FF5733;">Enhancing Comfort and Efficiency for Bangkok Riders</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="introduction" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">The Challenge of Overcrowding</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    Overcrowding is a significant deterrent to public transit adoption, impacting user comfort, safety, and overall system efficiency. During peak hours, the Bangkok MRT faces substantial challenges that diminish the rider experience. Understanding the root causes and implementing smart solutions are crucial for a future-ready system.
+                </p>
+            </div>
+        </section>
+
+        <section id="causes-impact" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Understanding the Bottlenecks</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    Overcrowding isn't just about too many people; it's a complex issue stemming from outdated infrastructure, inefficient design, and a lack of dynamic management.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="overcrowdingCausesChart"></canvas>
+                        </div>
+                        <p class="text-center text-sm mt-4 text-gray-600">
+                           This chart illustrates the primary factors contributing to MRT overcrowding, with outdated planning and sub-optimal station design being major contributors.
+                        </p>
+                    </div>
+                    <div class="kpi-card-overcrowding text-white p-8 rounded-lg shadow-xl text-center">
+                        <p class="text-lg font-semibold">Potential Congestion Reduction with AI</p>
+                        <p class="text-6xl font-bold my-2">40-60%</p>
+                        <p>AI-powered real-time passenger flow management can significantly reduce station congestion, as demonstrated in systems like Dubai's.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact-on-riders" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Impact on the Rider Experience</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    The consequences of overcrowding extend beyond mere discomfort, affecting safety, punctuality, and overall satisfaction.
+                </p>
+                <div class="chart-container">
+                    <canvas id="overcrowdingImpactChart"></canvas>
+                </div>
+                <p class="text-center text-sm mt-4 text-gray-600">
+                    This radar chart visualizes how overcrowding negatively impacts various aspects of the user experience, with reduced comfort and increased delays being the most prominent.
+                </p>
+            </div>
+        </section>
+
+        <section id="smart-solutions" class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center" style="color: #242325;">Smart Solutions for Smoother Journeys</h2>
+                <p class="text-center text-lg mb-6 max-w-3xl mx-auto">
+                    Leveraging technology and intelligent design can transform congested spaces into efficient, comfortable environments.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="solution-card-bg-1 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #00A6ED;">🧠</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">AI-Powered Flow Management</h3>
+                        <p class="text-gray-700">Utilize AI with CCTV and sensors for real-time monitoring and dynamic guidance of passengers, adjusting train frequencies as needed.</p>
+                    </div>
+                    <div class="solution-card-bg-2 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #F7C548;">🛡️</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Platform Screen Doors (PSDs)</h3>
+                        <p class="text-gray-700">Install physical barriers between passengers and tracks to enhance safety and ensure precise train stopping for efficient operations.</p>
+                    </div>
+                    <div class="solution-card-bg-3 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4" style="color: #70C1B3;">📱</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Real-Time Commuter Apps</h3>
+                        <p class="text-gray-700">Provide live crowd density data, predictive alerts for delays, and emergency notifications through an enhanced mobile application.</p>
+                    </div>
+                    <div class="solution-card-bg-1 p-6 rounded-lg shadow-md flex flex-col items-center text-center md:col-span-2 lg:col-span-1">
+                        <div class="text-5xl mb-4" style="color: #FF5733;">🏗️</div>
+                        <h3 class="font-bold text-xl mb-2" style="color: #242325;">Optimized Station Design</h3>
+                        <p class="text-gray-700">Redesign "conflict zones" and bottlenecks at transfer stations, improving waiting areas, escalators, and corridors for smoother passenger flow.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 mt-8 bg-gray-800 text-white">
+        <p>MRTA Innovation Camp 2025</p>
+        <p class="text-xs">Building a More Comfortable and Efficient MRT for Bangkok</p>
+    </footer>
+
+    <script>
+        const colorPalette = {
+            blue: '#00A6ED',
+            teal: '#70C1B3',
+            yellow: '#F7C548',
+            orange: '#FF5733',
+            dark: '#242325'
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                },
+                legend: {
+                    position: 'bottom',
+                }
+            }
+        };
+
+        const overcrowdingCausesData = {
+            labels: [
+                wrapLabel('Outdated System Master Plans', 16),
+                wrapLabel('Sub-optimal Station Design', 16),
+                wrapLabel('Imbalanced Passenger Flows', 16),
+                wrapLabel('Inadequate Infrastructure (Escalators, Corridors)', 16),
+                wrapLabel('Network Gaps (Poor Connectivity)', 16)
+            ],
+            datasets: [{
+                label: 'Contribution to Overcrowding (%)',
+                data: [30, 25, 20, 15, 10],
+                backgroundColor: [colorPalette.orange, colorPalette.yellow, colorPalette.teal, colorPalette.blue, '#90CAF9'],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        };
+        new Chart(document.getElementById('overcrowdingCausesChart'), {
+            type: 'bar',
+            data: overcrowdingCausesData,
+            options: {
+                ...tooltipTitleCallback,
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 35,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        },
+                        grid: { display: false }
+                    },
+                    y: {
+                         grid: { display: false }
+                    }
+                },
+                plugins: { ...tooltipTitleCallback.plugins, legend: { display: false } }
+            }
+        });
+
+        const overcrowdingImpactData = {
+            labels: [
+                wrapLabel('Reduced Comfort', 16),
+                wrapLabel('Increased Delays', 16),
+                wrapLabel('Safety Concerns', 16),
+                wrapLabel('Eroded Confidence', 16),
+                wrapLabel('Stress Levels', 16)
+            ],
+            datasets: [{
+                label: 'Impact Score (out of 10)',
+                data: [9.0, 8.5, 7.5, 8.0, 7.0],
+                backgroundColor: 'rgba(255, 87, 51, 0.2)',
+                borderColor: colorPalette.orange,
+                pointBackgroundColor: colorPalette.orange,
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colorPalette.orange
+            }]
+        };
+        new Chart(document.getElementById('overcrowdingImpactChart'), {
+            type: 'radar',
+            data: overcrowdingImpactData,
+            options: {
+                ...tooltipTitleCallback,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: false
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
